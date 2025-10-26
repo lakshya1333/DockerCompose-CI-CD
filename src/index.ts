@@ -14,8 +14,8 @@ app.get("/",async (req,res)=>{
 app.post("/",async (req,res)=>{
     await prismaClient.user.create({
         data: {
-            username: Math.random.toString(),
-            password: Math.random.toString()
+            username: Math.random().toString(),
+            password: Math.random().toString()
         }
     })
     res.json({
